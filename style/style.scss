@@ -1,0 +1,149 @@
+body {
+  font-family: "Open Sans Regular", sans-serif;
+  color: #cecece;
+  margin: 0;
+  letter-spacing: 1px;
+  margin: 120px auto;
+  max-width: 1200px;
+}
+
+.nav-container {
+  position: relative;
+  margin: 0 auto;
+
+  .nav-list {
+    display: flex;
+    justify-content: space-evenly;
+    align-items: center;
+    list-style: none;
+    margin: 0 auto;
+    padding: 0;
+
+    .nav-item {
+      font-size: 1rem;
+      cursor: pointer;
+
+      &:hover {
+        color: #4d91da;
+      }
+    }
+
+    .active {
+      cursor: default;
+      color: black;
+
+      &:hover {
+        color: black;
+      }
+    }
+  }
+}
+
+.nav-container {
+  .slider {
+    margin: 15px auto 0;
+    background-color: #cecece;
+    height: 1px;
+
+    .slider-indicator {
+      position: absolute;
+      height: 2px;
+      background-color: black;
+      transition: all 0.3s ease;
+      width: 0 !important;
+      left: 50% !important;
+      opacity: 0;
+    }
+
+    .active {
+      opacity: 1;
+      width: var(--width) !important;
+      left: var(--left) !important;
+    }
+  }
+}
+
+#clock {
+  display: none;
+  justify-content: center;
+  align-items: center;
+  margin-top: 50px;
+}
+
+.digit {
+  width: 40px;
+  height: 80px;
+  position: relative;
+  display: inline-block;
+  margin: 5px;
+}
+
+.colon {
+  width: 25px;
+  text-align: center;
+  font-size: 3rem;
+}
+
+.segment {
+  position: absolute;
+  background-color: black;
+  transition: transform 0.2s ease, opacity 0.2s ease;
+}
+
+.segment.off {
+  opacity: 0.1;
+}
+
+.segment.on {
+  opacity: 1;
+}
+
+.segment.a {
+  top: 0;
+  left: 10%;
+  width: 80%;
+  height: 10%;
+}
+
+.segment.b {
+  top: 0;
+  right: 0;
+  width: 10%;
+  height: 45%;
+}
+
+.segment.c {
+  bottom: 0;
+  right: 0;
+  width: 10%;
+  height: 45%;
+}
+
+.segment.d {
+  bottom: 0;
+  left: 10%;
+  width: 80%;
+  height: 10%;
+}
+
+.segment.e {
+  bottom: 0;
+  left: 0;
+  width: 10%;
+  height: 45%;
+}
+
+.segment.f {
+  top: 0;
+  left: 0;
+  width: 10%;
+  height: 45%;
+}
+
+.segment.g {
+  top: 50%;
+  left: 10%;
+  width: 80%;
+  height: 10%;
+  transform: translateY(-50%);
+}

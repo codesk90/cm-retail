@@ -1,0 +1,163 @@
+body {
+  font-family: "Open Sans Regular", sans-serif;
+  color: #cecece;
+  margin: 0;
+  letter-spacing: 1px;
+  margin: 120px auto;
+  max-width: 1200px;
+}
+
+.nav-container {
+  position: relative;
+  margin: 0 auto;
+}
+
+.nav-container .nav-list {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: space-evenly;
+      -ms-flex-pack: space-evenly;
+          justify-content: space-evenly;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  list-style: none;
+  margin: 0 auto;
+  padding: 0;
+}
+
+.nav-container .nav-list .nav-item {
+  font-size: 1rem;
+  cursor: pointer;
+}
+
+.nav-container .nav-list .nav-item:hover {
+  color: #4d91da;
+}
+
+.nav-container .nav-list .active {
+  cursor: default;
+  color: black;
+}
+
+.nav-container .nav-list .active:hover {
+  color: black;
+}
+
+.nav-container .slider {
+  margin: 15px auto 0;
+  background-color: #cecece;
+  height: 1px;
+}
+
+.nav-container .slider .slider-indicator {
+  position: absolute;
+  height: 2px;
+  background-color: black;
+  -webkit-transition: all 0.3s ease;
+  transition: all 0.3s ease;
+  width: 0 !important;
+  left: 50% !important;
+  opacity: 0;
+}
+
+.nav-container .slider .active {
+  opacity: 1;
+  width: var(--width) !important;
+  left: var(--left) !important;
+}
+
+#clock {
+  display: none;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  margin-top: 50px;
+}
+
+.digit {
+  width: 40px;
+  height: 80px;
+  position: relative;
+  display: inline-block;
+  margin: 5px;
+}
+
+.colon {
+  width: 25px;
+  text-align: center;
+  font-size: 3rem;
+}
+
+.segment {
+  position: absolute;
+  background-color: black;
+  -webkit-transition: opacity 0.2s ease, -webkit-transform 0.2s ease;
+  transition: opacity 0.2s ease, -webkit-transform 0.2s ease;
+  transition: transform 0.2s ease, opacity 0.2s ease;
+  transition: transform 0.2s ease, opacity 0.2s ease, -webkit-transform 0.2s ease;
+}
+
+.segment.off {
+  opacity: 0.1;
+}
+
+.segment.on {
+  opacity: 1;
+}
+
+.segment.a {
+  top: 0;
+  left: 10%;
+  width: 80%;
+  height: 10%;
+}
+
+.segment.b {
+  top: 0;
+  right: 0;
+  width: 10%;
+  height: 45%;
+}
+
+.segment.c {
+  bottom: 0;
+  right: 0;
+  width: 10%;
+  height: 45%;
+}
+
+.segment.d {
+  bottom: 0;
+  left: 10%;
+  width: 80%;
+  height: 10%;
+}
+
+.segment.e {
+  bottom: 0;
+  left: 0;
+  width: 10%;
+  height: 45%;
+}
+
+.segment.f {
+  top: 0;
+  left: 0;
+  width: 10%;
+  height: 45%;
+}
+
+.segment.g {
+  top: 50%;
+  left: 10%;
+  width: 80%;
+  height: 10%;
+  -webkit-transform: translateY(-50%);
+          transform: translateY(-50%);
+}
+/*# sourceMappingURL=style.css.map */
